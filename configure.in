@@ -1,0 +1,43 @@
+dnl Copyright (C) 2000 Lars Brinkhoff.
+
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(src/read_vt220.c)
+AM_INIT_AUTOMAKE(kbredir, 0.9)
+AM_CONFIG_HEADER(config.h)
+
+dnl AM_CONDITIONAL(SRCDIR, test "x$srcdir" != x.)
+
+if test "x$CFLAGS" = x; then
+	CFLAGS="-O2 -W -Wall -fomit-frame-pointer"
+fi
+
+dnl Checks for programs.
+dnl AC_PROG_AWK
+AC_PROG_CC
+AC_ARG_PROGRAM
+AC_PROG_INSTALL
+AC_PROG_LN_S
+dnl AC_PROG_RANLIB
+
+dnl Checks for libraries.
+dnl AC_CHECK_FUNC(gethostent, , AC_CHECK_LIB(nsl, gethostent))
+dnl AC_CHECK_FUNC(setsockopt, , AC_CHECK_LIB(socket, setsockopt))
+
+dnl Checks for header files.
+AC_HEADER_STDC
+dnl AC_CHECK_HEADERS(fcntl.h syslog.h unistd.h getopt.h sys/poll.h)
+AC_CHECK_HEADERS(linux/kd.h linux/vt.h linux/keyboard.h)
+AC_CHECK_HEADERS(X11/Xlib.h X11/keysym.h X11/extensions/XTest.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+dnl AC_C_CONST
+dnl AC_C_INLINE
+dnl AC_TYPE_SIZE_T
+##AC_CHECK_TYPE(socklen_t, unsigned) # doesn't search <sys/socket.h>
+
+dnl Checks for library functions.
+dnl AC_FUNC_MEMCMP
+AC_TYPE_SIGNAL
+dnl AC_CHECK_FUNCS(socket strdup strerror getopt getopt_long daemon vsyslog)
+
+AC_OUTPUT(Makefile src/Makefile)

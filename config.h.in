@@ -1,0 +1,32 @@
+/* config.h.in.  Generated automatically from configure.in by autoheader.  */
+
+/* Define as the return type of signal handlers (int or void).  */
+#undef RETSIGTYPE
+
+/* Define if you have the ANSI C header files.  */
+#undef STDC_HEADERS
+
+/* Define if you have the <X11/Xlib.h> header file.  */
+#undef HAVE_X11_XLIB_H
+
+/* Define if you have the <X11/extensions/XTest.h> header file.  */
+#undef HAVE_X11_EXTENSIONS_XTEST_H
+
+/* Define if you have the <X11/keysym.h> header file.  */
+#undef HAVE_X11_KEYSYM_H
+
+/* Define if you have the <linux/kd.h> header file.  */
+#undef HAVE_LINUX_KD_H
+
+/* Define if you have the <linux/keyboard.h> header file.  */
+#undef HAVE_LINUX_KEYBOARD_H
+
+/* Define if you have the <linux/vt.h> header file.  */
+#undef HAVE_LINUX_VT_H
+
+/* Name of package */
+#undef PACKAGE
+
+/* Version number of package */
+#undef VERSION
+

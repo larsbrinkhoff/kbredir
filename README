@@ -1,0 +1,22 @@
+These embryonic programs are used to send keyboard events from a
+source to a destination.
+
+Sources currently supported are:
+	* Characters and VT220 key sequences from stdin
+	* Raw keyboard events from Linux console
+	* xev output
+(maybe:	* X11 display)
+
+Destinations currently supported are:
+	* Characters and VT220 key sequences to stdout
+	* X11 display using XSendEvent
+	* X11 display using the XTest extension
+(maybe:	* Linux console)
+
+Usage: hack the source code to your liking, and type 'make' to build
+the programs.  The read_* programs read various keyboard devices and
+writes events to stdout, and the write_* programs send keyboard events
+read from stdin.
+
+Example:
+	read_vt220 | write_xtest
